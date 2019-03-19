@@ -22,7 +22,13 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
-}
+	const tabStr = strings.map(function(str) {
+		return(`${str} contains ${str.length} characters`);
+	});
+    
+return tabStr;
+
+};
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

@@ -24,7 +24,10 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
-}
 
+const stark = names.filter(names => names.endsWith("Stark"));
+return stark;
+
+}
 // Ne pas modifier l'export
 module.exports = keepStarks;

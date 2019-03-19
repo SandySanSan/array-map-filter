@@ -58,10 +58,23 @@ En sortie:
   ]
 
  */
-
 function getMoviesFreshness(movies) {
-}
 
+    let newArr = movies.map(function(item) {
+        if (item.rating < 60) {
+          item["label"] = "rotten";
+          return item;
+        } else if (item.rating<= 75) {
+            item["label"] = "fresh";
+            return item;
+        } else {
+            item["label"] = "certified fresh";
+            return item;
+        }
+   
+    });
+     return newArr;
+}
 
 
 // Ne pas modifier l'export

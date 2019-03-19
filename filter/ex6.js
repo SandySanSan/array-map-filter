@@ -27,6 +27,14 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+    
+    const filter = comments.filter( sentence => 
+        sentence.includes(bannedWords) ? (comments -= sentence) : (comments +=sentence));
+
+
+
+        
+    return filter;
 }
 
 // Ne pas modifier l'export

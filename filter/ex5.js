@@ -39,7 +39,11 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
-}
 
+
+const tri = items.filter( item => item.toLowerCase().includes(search));
+return tri;
+
+}
 // Ne pas modifier l'export
 module.exports = searchWordFilter;
