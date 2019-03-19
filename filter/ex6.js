@@ -27,15 +27,19 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
-    
-    const filter = comments.filter( sentence => 
-        sentence.includes(bannedWords) ? (comments -= sentence) : (comments +=sentence));
+      const toFilter = comments.map(sentence => sentence);
+      return toFilter.filter(sentence => {
+        for (let i = 0 ; i < bannedWords.length; i++) {
+  
+          if(sentence.toLowerCase().includes(bannedWords[i])) {
 
+              return false;
+          };
+        }  
+        return true;
 
-
-        
-    return filter;
+        })
+       
 }
-
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;
